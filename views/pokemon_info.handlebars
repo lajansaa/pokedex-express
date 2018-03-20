@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokedex</title>
+</head>
+<body>
+  {{#if info.pokemonFound}}
+  <h1>{{info.name}}</h1>
+  <img src="{{info.img}}">
+  <ul>
+    {{#each info}}
+      <li>{{@key}}: {{this}}</li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <p>Could not find information about {{pokemon}} - Is that a new pokemon? Gotta catch em' all!</p>
+  {{/if}}
+</body>
+</html>
